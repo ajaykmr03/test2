@@ -1,16 +1,69 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- You may freely edit this file. See commented blocks below for -->
-<!-- some examples of how to customize the build. -->
-<!-- (If you delete it and reopen the project it will be recreated.) -->
-<!-- By default, only the Clean and Build commands use this build script. -->
-<!-- Commands such as Run, Debug, and Test only use this build script if -->
-<!-- the Compile on Save feature is turned off for the project. -->
-<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
-<!-- in the project's Project Properties dialog box.-->
-<project name="portfolio" default="default" basedir=".">
-    <description>Builds, tests, and runs the project portfolio.</description>
-    <import file="nbproject/build-impl.xml"/>
-    <!--
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NetBeans Ant build XML — HTML preview</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa6bf;--accent:#60a5fa}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#071028 0%, #071a2a 100%); color:#e6eef8}
+    header{padding:28px 32px;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .wrap{max-width:980px;margin:28px auto;padding:18px}
+    .card{background:rgba(255,255,255,0.02);border-radius:14px;padding:18px;box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    h1{font-size:20px;margin:0 0 6px}
+    p.lead{color:var(--muted);margin:0 0 12px}
+    pre{background:#001427;border-radius:8px;padding:16px;overflow:auto;color:#cfe8ff;font-family:SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace;font-size:13px;line-height:1.6}
+    .meta{display:flex;gap:8px;align-items:center;margin-bottom:10px}
+    .btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;color:var(--muted);cursor:pointer}
+    .btn:active{transform:translateY(1px)}
+    .notice{font-size:13px;color:var(--muted);margin-top:12px}
+    .copy-ok{color:limegreen;margin-left:8px}
+    footer{color:var(--muted);text-align:center;margin:22px 0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Converted: NetBeans Ant build XML → HTML preview</h1>
+      <p class="lead">This single-file HTML shows the original <code>project</code> build XML inside a readable, copyable code block and a short human-readable summary extracted from the comments.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="card">
+      <div class="meta">
+        <strong>File:</strong>
+        <span style="color:var(--muted)">portfolio/build.xml (original)</span>
+        <button class="btn" id="copyBtn">Copy XML</button>
+        <span id="copied" class="copy-ok" style="display:none">Copied ✓</span>
+      </div>
+
+      <details open>
+        <summary style="cursor:pointer;margin-bottom:10px">Human-readable summary (from XML comments)</summary>
+        <div style="padding:10px 8px;color:var(--muted)">
+          <ul>
+            <li>The Ant project named <code>portfolio</code> defines build targets for building, testing and running the project.</li>
+            <li>Build behaviour is driven by an imported file <code>nbproject/build-impl.xml</code> (NetBeans-generated).</li>
+            <li>The file includes a list of optional hook targets you can implement: <code>-pre-init</code>, <code>-post-init</code>, <code>-pre-compile</code>, <code>-post-compile</code>, <code>-pre-dist</code>, etc.</li>
+            <li>The comments show examples of how to override default targets (e.g., <code>run</code> target) or plug custom tasks such as an obfuscator.</li>
+          </ul>
+        </div>
+      </details>
+
+      <h3 style="margin-top:12px">XML content</h3>
+      <pre id="xmlBlock">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- You may freely edit this file. See commented blocks below for --&gt;
+&lt;!-- some examples of how to customize the build. --&gt;
+&lt;!-- (If you delete it and reopen the project it will be recreated.) --&gt;
+&lt;!-- By default, only the Clean and Build commands use this build script. --&gt;
+&lt;!-- Commands such as Run, Debug, and Test only use this build script if --&gt;
+&lt;!-- the Compile on Save feature is turned off for the project. --&gt;
+&lt;!-- You can turn off the Compile on Save (or Deploy on Save) setting --&gt;
+&lt;!-- in the project's Project Properties dialog box.--&gt;
+&lt;project name="portfolio" default="default" basedir="."&gt;
+    &lt;description&gt;Builds, tests, and runs the project portfolio.&lt;/description&gt;
+    &lt;import file="nbproject/build-impl.xml"/&gt;
+    &lt;!--
 
     There exist several targets which are by default empty and which can be 
     used for execution of your tasks. These targets are usually executed 
@@ -34,11 +87,11 @@
 
     Example of pluging an obfuscator after the compilation could look like 
 
-        <target name="-post-compile">
-            <obfuscate>
-                <fileset dir="${build.classes.dir}"/>
-            </obfuscate>
-        </target>
+        &lt;target name="-post-compile"&gt;
+            &lt;obfuscate&gt;
+                &lt;fileset dir="${build.classes.dir}"/&gt;
+            &lt;/obfuscate&gt;
+        &lt;/target&gt;
 
     For list of available properties check the imported 
     nbproject/build-impl.xml file. 
@@ -56,16 +109,38 @@
 
     Example of overriding the target for project execution could look like 
 
-        <target name="run" depends="<PROJNAME>-impl.jar">
-            <exec dir="bin" executable="launcher.exe">
-                <arg file="${dist.jar}"/>
-            </exec>
-        </target>
+        &lt;target name="run" depends="&lt;PROJNAME&gt;-impl.jar"&gt;
+            &lt;exec dir="bin" executable="launcher.exe"&gt;
+                &lt;arg file="${dist.jar}"/&gt;
+            &lt;/exec&gt;
+        &lt;/target&gt;
 
     Notice that overridden target depends on jar target and not only on 
     compile target as regular run target does. Again, for list of available 
     properties which you can use check the target you are overriding in 
     nbproject/build-impl.xml file. 
 
-    -->
-</project>
+
+    --&gt;
+&lt;/project&gt;
+</pre>
+
+      <p class="notice">Tip: use the <strong>Copy XML</strong> button to paste this into a file named <code>build.xml</code> or save the page as HTML.</p>
+    </div>
+
+    <footer>
+      Converted on: <strong id="ts"></strong>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('ts').textContent = new Date().toLocaleString();
+    const copyBtn = document.getElementById('copyBtn');
+    copyBtn.addEventListener('click', async ()=>{
+      const txt = document.getElementById('xmlBlock').textContent;
+      try{ await navigator.clipboard.writeText(txt); document.getElementById('copied').style.display='inline'; setTimeout(()=>document.getElementById('copied').style.display='none',1600);}catch(e){alert('Copy failed — select the text and press Ctrl+C (Cmd+C on Mac).')}
+    });
+  </script>
+</body>
+</html>
+
